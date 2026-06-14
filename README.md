@@ -1,6 +1,7 @@
 #  CineStream — Media Explorer
 
 A modern movie discovery web app built with React and the TMDB API. Browse popular movies, search by title, and explore an infinite scroll feed — all in a sleek dark-themed UI.
+[Live Demo] https://cine-stream-one-theta.vercel.app/
 
 ---
 
