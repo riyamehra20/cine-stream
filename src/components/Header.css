@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__logo {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.header__logo span {
+  color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .header__inner {
+    padding: 12px 16px;
+    gap: 16px;
+  }
+  .header__logo {
+    font-size: 20px;
+  }
+}

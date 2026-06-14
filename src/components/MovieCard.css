@@ -1,0 +1,81 @@
+.movie-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(229, 9, 20, 0.18);
+}
+
+.movie-card__poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #111;
+}
+
+/* FAQ Q12: Placeholder when poster_path is null */
+.movie-card__poster-placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.movie-card__poster-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-card__info {
+  padding: 10px 12px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-card__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.movie-card__year {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.movie-card__rating {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.rating--high { background: rgba(39, 174, 96, 0.15); color: #2ecc71; }
+.rating--mid  { background: rgba(241, 196, 15, 0.15); color: var(--star); }
+.rating--low  { background: rgba(229, 9, 20, 0.15);   color: var(--accent); }
