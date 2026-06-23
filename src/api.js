@@ -3,6 +3,7 @@ import axios from 'axios'
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
 
 const API_KEY = process.env.NEXT_PUBLIC_TMDB_KEY;
+console.log('API KEY:', API_KEY)
 
 const tmdb = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
